@@ -10,7 +10,7 @@ ENDPOINTS
 |  get  |  /shelter/edit? = xxx  | Muestra el formulario para editar un centro |
 |  post  | /shelter/edit? = xxx  | Edita el centro en la base de datos  |
 |  get  |  /dog/new  | Muestra el formulario para crear un perro  |
-|  post | /dogs/news  | Guarda el perro en la BBDD
+|  post | /dogs/new  | Guarda el perro en la BBDD
 |  get  |  /dogs  | Muestra la lista de perros  |
 |  get  | /dogs/:id  |  Muestra los detalles de un perro  |
 |  get  |  /dogs/edit? = xxx  | Muestra el formulario para editar un perro  |
