@@ -16,3 +16,7 @@ ENDPOINTS
 |  get  |  /dogs/edit? = xxx  | Muestra  formulario para editar un perro  |
 |  post  | /dogs/edit? = xxx  | Edita  perro en la BBDD  |
 |  get  |  /dogs/delete?id=xxx | Elimina  perro de la BBDD |
+|  get  |  /signup  |  Muestra formulario de registro  |
+|  post  | /signup  |  Procesa los datos del formulario de registro  |
+|  get  |  /login  |  Muestra formulario de inicio de sesión  |
+|  post  |  /login  |  Procesa los datos del formulario de inicio de sesión  |
