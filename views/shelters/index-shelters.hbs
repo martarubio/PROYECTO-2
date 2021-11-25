@@ -1,0 +1,24 @@
+<div class="index_shelters">
+  <h1>Relación de centros</h1>
+
+  <ul>
+    {{#each allShelters}}
+    <a href="/shelters/{{this.name}}">
+    </a>
+
+    <li>
+      <h4>{{this.name}}</h4>
+      <p><b>Ciudad:</b>{{this.city}}</p>
+      <p><b>Localización:</b>{{this.location}}
+        <img src="./icons/1f43e.svg.jpg">
+        <button type="button" class="btn btn-dark"><a href="/shelter-map/{{id}}">Ver mapa</a></button>
+
+      </p>
+      <p><b>Tipo de centro:</b>{{this.type}}</p>
+      <p><b>Nº de teléfono: </b>{{this.telephone}}</p>
+      <p><b>Correo electrónico:</b>{{this.email}}</p>
+      <p><b>Comentarios:</b>{{this.comments}}</p>
+    </li>
+    {{/each}}
+  </ul>
+</div>

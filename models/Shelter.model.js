@@ -1,26 +1,24 @@
 const { Schema, model } = require("mongoose");
 
-const shelterSchema = new Schema({
-  name: { type: String, unique: true },
-  location: {
-    type: {
-      type: String,
+const shelterSchema = new Schema(
+  {
+    name: { type: String, unique: true },
+    city: String,
+    type: String,
+    location: {
+      type: {
+        type: String,
+      },
+      coordinates: [Number],
     },
-    coordinates: [Number],
-
     telephone: String,
     email: String,
-    // dogs-for-adoption: ENLACE A PERROS
-
     comments: String,
   },
+  { timestamps: true }
+);
 
-  timestamps: true,
-});
-
-dogSchema.index({ location: "2dsphere" });
-
-// module.exports = mongoose.model("Dog", dogSchema);
+shelterSchema.index({ location: "2dsphere" });
 
 const Shelter = model("Shelter", shelterSchema);
 

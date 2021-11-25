@@ -1,0 +1,16 @@
+<div class="dogs_list">
+  <h1>Lista de perros</h1>
+  <button type="button" class="btn btn-warning"><a href="/login">Estoy interesado en adoptar</a></button>
+
+  <ul>
+    {{#each allDogs}}
+    <li>
+      <h3>{{this.name}}</h3>
+      <a href="/dogs/{{this.id}}">
+        <h5> Detalles</h5>
+      </a>
+      <img class="dogs_in_adoption" src="{{this.img_url}}">
+    </li>
+    {{/each}}
+  </ul>
+</div>

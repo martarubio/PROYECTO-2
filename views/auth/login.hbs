@@ -1,0 +1,25 @@
+<div id="form">
+  <h2>Iniciar Sesión</h2>
+
+  <form action="/login" method="POST">
+
+    <label>
+      Email
+      <input type="email" name="email" placeholder="introduzca su email" />
+    </label>
+
+    <label>Contraseña
+      <input
+        type="password"
+        name="password"
+        placeholder="introduzca su contraseña"
+      />
+    </label>
+
+    <button type="submit">Entrar</button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>

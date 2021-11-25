@@ -1,19 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{title}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
+<head>
 
-   <body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      {{{body}}}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 
-      <script src="/js/script.js"></script>
-   </body>
+    <title>llevame contigo</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Adopta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/dogs-list">Perros en adopción</a>
+                        <a class="dropdown-item" href="/index-shelters">Centros de adopción</a>
+                        <a class="dropdown-item" href="#">Finales felices</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Otras formas de ayudar
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/casa_acogida">Casa de acogida</a>
+                        <a class="dropdown-item" href="/voluntario_albergue">Voluntario en albergue</a>
+                        <a class="dropdown-item" href="/donativo">Haz un donativo</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Noticias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dedicatoria</a>
+                </li>
+
+            </ul>
+        </div>
+        <ul>
+
+            <li id="to-right">
+                <a href="/signup">Registrarse</a>
+                <span> | </span>
+                <a href="/login">Iniciar Sesión</a>
+                <span> | </span>
+                <form id="logout-form" action="/logout" method="POST">
+                    <button>Cerrar Sesión</button>
+                </form>
+            </li>
+
+        </ul>
+
+
+    </nav>
+
+
+    {{{body}}}
+
+    <div class="Footer_outer">
+        <div class="Footer_inner_left">
+            <ul>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Adopta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/dogs-list">Perros en adopción</a>
+                        <a class="dropdown-item" href="/index-shelters">Centros de adopción</a>
+                        <a class="dropdown-item" href="#">Finales felices</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Otras formas de ayudar
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/casa_acogida">Casa de acogida</a>
+                        <a class="dropdown-item" href="/voluntario_albergue">Voluntario en albergue</a>
+                        <a class="dropdown-item" href="/donativo">Haz un donativo</a>
+
+                    </div>
+                </li>
+
+                <li><a href="">Noticias</a></li>
+            </ul>
+        </div>
+
+        <div class="Footer_inner_right">
+            <h6>Contacto<h6>
+                    <p>Teléfono: 0000000</p>
+                    <p>Mail: kdkdkdkd</p>
+                    <p>Redes</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+
+</body>
 
 </html>
