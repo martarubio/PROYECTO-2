@@ -36,7 +36,7 @@ router.get('/dogs/:id', (req, res, next) => {
 });
 router.get("/dedicatoria", (req, res) => res.render("dedicatoria"))
 router.get("/noticias", (req, res) => res.render("noticias"))
-
+router.get("/finales_felices", (req, res) => res.render("finales_felices"))
 
 module.exports = router;
 
