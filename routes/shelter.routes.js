@@ -25,12 +25,25 @@ router.post("/create", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-module.exports = router;
-
-
 router.get('/shelter-map/:id', (req, res, next) => {
 
   Shelter.findById(req.params.id)
     .then(theShelter => res.render('shelters/shelter-map', { shelter: theShelter }))
     .catch(err => next(new Error(err)));
 });
+
+router.get("/shelters/api/:id", (req, res, next) => {
+  Shelter.findById(req.params.id)
+    .then((allShelters) =>
+      res.json({ allShelters })
+    )
+    .catch((err) => console.log(err));
+});
+
+
+
+
+
+module.exports = router;
+
+

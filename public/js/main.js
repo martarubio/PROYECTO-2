@@ -4,10 +4,16 @@ initMap();
 function initMap() {
 
     const map = new google.maps.Map(
-        document.querySelector('#myMap'),
+        //1. este id pertenece al div del html
+        document.querySelector('#map'),
         {
             zoom: 10,
-            center: shelters.location.coordinates,
+            center: {
+                //2 este centro es unu obj lat, lng
+                //todo: poner centro del usuario
+                lat: 40.41290473938333,
+                lng: - 3.7035347514879446,
+            },
         }
     )
 
@@ -15,24 +21,32 @@ function initMap() {
 }
 
 function getShelters(map) {
+    //3. como sacamos el valor de nuestro input escondido en el html
+    const idInput = document.querySelector("#id-input")
+    const id = idInput.value
+    console.log(id)
 
+    //4. cual es el endpoint que responde con res.json a este axios
     axios
-        .get('/localhost/llevame-contigo')
-        .then(response => printShelters(response.data, map))
+        .get('/shelters/api/' + id)
+        .then(response => {
+
+            console.log(response.data.allShelters)
+            printShelters(response.data.allShelters, map)
+        })
         .catch(err => console.log(err))
 }
 
 
-function printShelters(shelters, map) {
+function printShelters(shelter, map) {
 
-    shelters.forEach(elm => {
+    //5. como recibe esta funcione el shelter para hacer el marker
+    let position = {
+        lat: shelter.location.coordinates[0],
+        lng: shelter.location.coordinates[1]
+    }
 
-        let position = {
-            lat: elm.location.coordinates[0],
-            lng: elm.location.coordinates[1]
-        }
+    new google.maps.Marker({ map, position, title: shelter.name })
 
-        new google.maps.Marker({ map, position, title: elm.name })
-    })
 }
 

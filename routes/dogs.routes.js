@@ -34,6 +34,8 @@ router.get('/dogs/:id', (req, res, next) => {
     .then(theDog => res.render('dogs/dog-details', { dog: theDog }))
     .catch(err => next(new Error(err)));
 });
+router.get("/dedicatoria", (req, res) => res.render("dedicatoria"))
+router.get("/noticias", (req, res) => res.render("noticias"))
 
 
 module.exports = router;
